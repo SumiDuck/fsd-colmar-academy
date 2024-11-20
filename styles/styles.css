@@ -7,7 +7,7 @@
 *{
     margin: 0;
     padding:  0;
-    outline: 1px dashed #ddd;
+    /* outline: 1px dashed #000; */
 }
 
 html{
@@ -21,15 +21,19 @@ body{
 
 }
 
-a {
+nav a {
     text-decoration: none;
     color: inherit;
+}
+
+nav a:hover{
+    color:#aaa
 }
 
 .container{
     display: grid;
     grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end];
-    grid-template-rows: repear (6, min-content);
+    grid-template-rows: repeat(6, min-content);
 }
 /* TODO */
 
@@ -107,20 +111,29 @@ nav > a{
 header {
     display: flex;
     background-color:#d8d8d8;
-
+    align-items: center;
+    justify-content: center;
 }
 
-header img{
-    width: 60%;
+.imgcontainer{
     padding: 2rem 1.5rem;
+}
+
+header > img {
+    max-width: 100%;
+    height: auto;
     
+}
+
+.learn {
+    padding-right: 2rem;;
 }
 header > div {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left:1.5rem;
+    justify-content: space-evenly;
+    height: 18rem;
 
 }
 
@@ -152,10 +165,151 @@ header button:hover{
 
 /* Set up practice section */
 
+.practice{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
 
+.practice > .practice-text > h1{
+    margin-bottom: 1.5rem;
+    font-size: xx-large;
+    
+}
+.practice > .imgcontainer > img{
+    max-width: 100%;
+    height: auto;
+   
+ }
+
+/* * .practice > h1 font managed in header.  */
+
+.practice > .imgcontainer > p{
+    font-size:small;
+    font-weight:lighter;
+   
+}
+
+.practice >  .practice-text{
+    padding: 0 1.5rem; 
+
+
+}
+
+.practice > .practice-text > p > span{
+    font-weight:bold;
+    font-size: small;
+    display : block;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+
+/* Set up events section */
+
+.events{
+    display:grid;
+    grid-template-rows: repeat(3, min-content);
+    /* padding-top:2rem; */
+    
+}
+
+.events > div{
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    border: 1px solid lightgray;
+    padding-top: 2.0625rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    border-top-style: none;
+    
+    /* padding: 1rem; */
+}
+
+.events > div:last-child{
+    border-bottom-style: none;
+}
+
+.events > div > img{
+    max-width: 100%;
+    height: auto;
+    /* padding: 1rem; */
+}
+
+
+.events div:hover{
+    background-color: lightgray;
+}
+
+.content{
+    align-content: center;
+    padding-left: 1rem;
+    line-height: 1.4;
+}
+
+.content p{
+    font-size: 0.9rem;
+    color: #464646;
+}
+.content h3{
+    margin-top: 0.5rem;
+}
+
+.content a{
+    text-decoration: none;
+    color: rgb(116, 154, 238);
+    padding-top: .5rem;
+    
+}
 /* Hide events mobile */
+/* Start Learning  */
+
+.start-learning{
+    display: grid;
+    /* padding-top: 2rem; */
+    background-color: #d8d8d8;
+    grid-column: 1 / -1;
+    
+}
+
+.start-learning h1{
+    text-align: center;
+    font-size: xx-large;
+    padding: 2rem;
+    color: rgb(36, 36, 36);
+}
 
 
+/* Start of footer */
+
+footer{
+    display: flex;
+    grid-column: full-start/full-end;
+    justify-content: space-between;
+    border-top: 1px solid #e7e7e7;
+    padding: 1rem 1.5rem 2rem;  
+    color: #464646
+}
+
+footer > ul {
+    display: flex;
+    list-style: none;
+     
+}
+
+footer a{
+    text-decoration: none;
+    color: #464646
+}
+footer a:hover{
+    color: #aaa;
+}
+
+footer > ul > li {
+    margin-right: 0.5rem;
+}
 /** ********************** **/
 /** End of Desktop Section **/
 
