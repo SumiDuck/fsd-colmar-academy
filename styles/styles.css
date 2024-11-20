@@ -152,7 +152,13 @@ header button{
     color: white;
     text-align:center;
     padding: 0.5rem 0; /* top-bottom (0.5 rem) left-right (0) */
+    
 }
+
+header a{
+    text-decoration: none;
+}
+
 
 header button:hover{
     background-color: lightslategray;
@@ -264,13 +270,14 @@ header button:hover{
     
 }
 /* Hide events mobile */
-/* Start Learning  */
+/* Start Learning tab / prject cards */
 
 .start-learning{
     display: grid;
     /* padding-top: 2rem; */
     background-color: #d8d8d8;
     grid-column: 1 / -1;
+    padding:0  4.5rem 2rem;
     
 }
 
@@ -279,6 +286,113 @@ header button:hover{
     font-size: xx-large;
     padding: 2rem;
     color: rgb(36, 36, 36);
+}
+
+.learning-project{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+.projectcard {
+    width: auto;
+    background-color: white;
+    margin: auto;
+    height: 100%;
+  }
+
+.card-content{
+    color: #464646;
+    padding: 1rem 1rem ;
+    padding-bottom: 1.5rem;
+    
+}
+
+
+.card-content h4{
+    padding-bottom: .5rem;
+}
+
+.card-content .scope{
+    padding-bottom: .5rem;
+    font-size: small;
+    color:#757575
+}
+
+.card-content span {
+    color:#757575;
+    font-size: small;
+
+}
+
+
+
+.projectcard a{
+    text-decoration:none;
+}
+
+  
+.projectcard img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .projectcard:hover{
+    transition: 0.2s ease-out;
+    transform: scale(1.05);
+    box-shadow: 0.5rem 0.5rem 1rem rgb(56, 56, 56);
+  }
+
+/* Start of Thesis exhibit */
+.thesis-title h1 {
+    font-size: xx-large;
+}
+.thesis-exhibit{
+    display: grid;
+    grid-column: 1 / -1;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: center;   
+}
+
+.thesis-video{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.thesis-events {
+    display:grid;
+    grid-template-rows: repeat(2, min-content);
+    
+
+}
+
+.thesis-events > div > img{
+    max-width: 100%;
+    height: auto;
+}
+
+.thesis-events > div{
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    
+}
+
+
+.thesis-events div:hover{
+    background-color: lightgray;
+}
+
+.thesis-text-content{
+    padding-top: 1.5rem;
+}
+
+.thesis-text-content p{
+    padding-top: .5rem;
+    padding-bottom: 2rem;
 }
 
 
@@ -310,11 +424,17 @@ footer a:hover{
 footer > ul > li {
     margin-right: 0.5rem;
 }
+
+
+/* Hide mobile nav in desktop version. */
+    #nav-mobile{
+        display: none;
+        
+    }
+
 /** ********************** **/
 /** End of Desktop Section **/
 
-
-/* TODO */
 
 /** Start of Mobile Section **/
 /** *********************** **/
@@ -322,7 +442,57 @@ footer > ul > li {
 /* if the width of screen is 640px and below (aka 40rem x 16px) */
 @media screen and (max-width: 40rem ) {
     
+    /* nav will be hidden in mobile mode */
+    nav{
+        display: none;
+    }
 
+    #nav-mobile{
+        display: flex;
+        align-items: center;
+        grid-column: full-start/full-end;
+        justify-content: space-around;
+        height: 4rem;
+      
+    }
+
+    .container {
+        display:block;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+        
+   
+    .imgcontainer{
+    padding: 0;
+    }
+
+    .practice .imgcontainer {
+        padding-bottom: 1rem;
+    }
+
+    header > div {
+
+        display: block;
+        margin: auto;
+        width: auto;
+        padding-left: 2rem;
+        align-content: center;
+        justify-content: center;
+    
+    }
+    
+    header div > h1{
+        font-size: xx-large;
+        margin-bottom: 2rem;
+    }
+    
+    header div > h2{
+        font-size: large;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+ 
 }
 
 /* *********************** */
