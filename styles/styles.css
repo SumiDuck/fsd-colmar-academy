@@ -601,7 +601,11 @@ footer > ul > li {
         font-size: x-large;
         font-weight: bold;
     }
-
+    /* Remove padding from video as per doc specs. */
+    .thesis-video {
+        padding:0;
+        padding-bottom: 1.5rem;
+    }
 
 }
 /* *********************** */
