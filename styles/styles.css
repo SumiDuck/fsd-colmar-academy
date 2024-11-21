@@ -326,11 +326,11 @@ header button:hover{
     height: auto;
   }
 
-  .learningcard:hover{
+.learningcard:hover{
     transition: 0.2s ease-out;
     transform: scale(1.05);
     box-shadow: 0.5rem 0.5rem 1rem rgb(56, 56, 56);
-  }
+ }
 
 /* Start of Thesis exhibit */
 .thesis-title h1 {
@@ -414,7 +414,7 @@ footer > ul > li {
 
 
 /* Hide mobile nav, hide desktopimages, Hide footer links  in desktop version. */
-    #nav-mobile, .events-img-mobile, footer > ul{
+    #nav-mobile, .events-img-mobile, #accordion, .learning-project-mobile{
         display: none;
         
     }
@@ -432,7 +432,7 @@ footer > ul > li {
 @media screen and (max-width: 40rem ) {
     
     /* things that will be hidden in mobile mode */
-    nav, .practice, .thesis-events, .thesis-text-content, .events-img-desktop{
+    nav, .practice, .thesis-events, .thesis-text-content, .events-img-desktop, .learningcard, footer > ul{
         display: none;
     }
 
@@ -442,15 +442,13 @@ footer > ul > li {
         grid-column: full-start/full-end;
         justify-content: space-around;
         height: 4rem;
-      
     }
-/* Prevents the mobile side to be scrollable to thr right */
+/* Prevents the mobile side to be scrollable to the right */
     .container {
         display:block;
         max-width: 100%;
         overflow-x: hidden;
     }
-        
    
     .imgcontainer{
     padding: 0;
@@ -539,6 +537,84 @@ footer > ul > li {
     .events div:nth-of-type(3){
     background-color: #f3f5f5;
     }
+
+
+    /* Mobile Start Learning Project Cards*/
+   
+    .accordion img{
+        max-width: 100%;
+        height: auto;
+      }
+
+    .accordion{
+        display: grid;
+        grid-column: full-start/full-end;
+        width:100%;
+        text-decoration: none;
+        transition: 0.4s;   
+        
+    }
+
+    .accordion > a{
+        text-decoration:none;
+        background-color: #f3f5f5;
+    }
+
+
+   
+    details {
+        font-family: sans-serif;
+        width: 100%;
+        background-color: #d8d8d8;
+        border: none;
+        border-radius: 5px;
+        margin: 1rem;
+      }
+    
+      /* Adjust Start Learning Padding for mobile */
+
+    .start-learning{
+        display: grid;
+        padding:0;
+    }
+      
+    .learning-project-mobile{
+        display: block;
+        padding-right: 2rem;
+    }
+
+    /* Adjust Mobile font size */
+    .learning-project-mobile h4{
+        font-size: x-large;
+    }
+
+    .learning-project-mobile span{
+        font-size: medium;
+    }
+      /*Remove hover for mobile  */
+      details:hover {
+       box-shadow: 0;
+      }
+      details > summary {
+        list-style: none;
+      }
+      /* Remove Arrow */
+      details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+      details > summary::-webkit-details-marker /* Safari */ {
+        display: none;
+        
+      }
+      
+      summary {
+        margin: 0.5rem;
+        padding-top: 1rem;
+        padding-bottom:1.5rem;
+        padding-left: 1rem;
+        cursor: pointer;
+        font-size: x-large;
+        font-weight: bold;
+      }
+
 
 }
 /* *********************** */
