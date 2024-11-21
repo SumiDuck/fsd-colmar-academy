@@ -2,7 +2,7 @@
 /* Universal selector (*) targets every element (regardless tag, class, ID) */
 *{
     margin: 0;
-    padding:  0;
+    padding: 0;
     /* outline: 1px dashed #000; */
 }
 
@@ -14,7 +14,16 @@ html{
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f3f5f5;
+   
 }
+
+/* Only Desktopmode will have this spacing */
+@media (min-width:40rem) {
+    body { width: 85vw;
+        margin: 0 auto; }
+    }
+
+
 
 /* Splits the entire page into 60% and 40% */
 .container{
@@ -332,6 +341,10 @@ header button:hover{
     grid-template-rows: repeat(2, min-content);
 }
 
+/* Easter Egg */
+.thesis-events div:first-child{
+    background-color: lightgrey;
+}
 .thesis-events > div > img{
     max-width: 100%;
     height: auto;
@@ -423,7 +436,9 @@ footer > ul > li {
         display:block;
         max-width: 100%;
         overflow-x: hidden;
+        
     }
+   
    /* Make Image touch the sides of the screen */
     .imgcontainer{
     padding: 0;
@@ -541,7 +556,7 @@ footer > ul > li {
         background-color: #d8d8d8;
         border: none;
         border-radius: 5px;
-        margin: 1rem;
+        margin: 0.5rem 1rem;
       }
     
       /* Adjust Start Learning Padding for mobile */
@@ -553,6 +568,7 @@ footer > ul > li {
     .learning-project-mobile{
         display: block;
         padding-right: 2rem;
+        padding-top: 0;;
     }
 
     /* Adjust Mobile font size */
