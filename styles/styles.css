@@ -1,9 +1,6 @@
-/* TODO */
 
 /* Reset CSS */
-
 /* Universal selector (*) targets every element (regardless tag, class, ID) */
-
 *{
     margin: 0;
     padding:  0;
@@ -21,15 +18,12 @@ body{
 
 }
 
-
-
 /* Splits the entire page into 60% and 40% */
 .container{
     display: grid;
     grid-template-columns: [full-start] 0.6fr [center-end center-start] 0.4fr [full-end];
     grid-template-rows: repeat(6, min-content);
 }
-/* TODO */
 
 /** Start of Desktop Section **/
 /** ************************ **/
@@ -40,7 +34,6 @@ nav {
     grid-column: full-start / full-end;
     justify-content: space-between;
     height: 4rem;
-    
 }
 
 nav ul{
@@ -55,8 +48,7 @@ nav ul li{
 
 nav ul li:last-child{
     padding-right: 1.5rem;
- }
-
+}
 
 nav ul li a{
    font-size: 0.75rem;
@@ -142,8 +134,6 @@ header button{
     color: white;
     text-align:center;
     padding: 0.5rem 0;
-
-    
 }
 
 header a{
@@ -156,12 +146,7 @@ header button:hover{
     background-color: lightslategray;
 }
 
-
-
-
-
 /* Set up practice section */
-
 .practice{
     display: flex;
     flex-direction:column;
@@ -191,8 +176,6 @@ header button:hover{
 
 .practice >  .practice-text{
     padding: 0 1.5rem; 
-
-
 }
 
 .practice > .practice-text > p > span{
@@ -204,12 +187,10 @@ header button:hover{
 }
 
 /* Set up events section */
-
 .events{
     display:grid;
     grid-template-rows: repeat(3, min-content);
     /* padding-top:2rem; */
-    
 }
 
 .events > div{
@@ -220,8 +201,6 @@ header button:hover{
     padding-left: 1rem;
     padding-bottom: 1rem;
     border-top-style: none;
-    
-    /* padding: 1rem; */
 }
 
 .events > div:last-child{
@@ -264,15 +243,14 @@ header button:hover{
     
 }
 /* Hide events mobile */
-/* Start Learning tab / prject cards */
 
+/* Start Learning tab / project cards */
 .start-learning{
     display: grid;
     /* padding-top: 2rem; */
     background-color: #d8d8d8;
     grid-column: 1 / -1;
     padding:0  4.5rem 2rem;
-    
 }
 
 .start-learning h1{
@@ -293,7 +271,7 @@ header button:hover{
     background-color: white;
     margin: auto;
     height: 100%;
-  }
+}
 
 .card-content{
     color: #464646;
@@ -324,15 +302,16 @@ header button:hover{
 .learningcard img{
     max-width: 100%;
     height: auto;
-  }
+}
 
+  /* Hover Effect for the Card */
 .learningcard:hover{
     transition: 0.2s ease-out;
     transform: scale(1.05);
     box-shadow: 0.5rem 0.5rem 1rem rgb(56, 56, 56);
- }
+}
 
-/* Start of Thesis exhibit */
+/* Start of Thesis exhibit section */
 .thesis-title h1 {
     font-size: xx-large;
 }
@@ -368,7 +347,6 @@ header button:hover{
     padding-bottom: 1rem;
 }
 
-
 .thesis-events div:hover{
     background-color: lightgray;
 }
@@ -384,7 +362,6 @@ header button:hover{
 
 
 /* Start of footer */
-
 footer{
     display: flex;
     grid-column: full-start/full-end;
@@ -449,7 +426,7 @@ footer > ul > li {
         max-width: 100%;
         overflow-x: hidden;
     }
-   
+   /* Make Image touch the sides of the screen */
     .imgcontainer{
     padding: 0;
     }
@@ -458,15 +435,14 @@ footer > ul > li {
         padding-bottom: 1rem;
     }
 
+    /* Pad the content area of the header */
     header > div {
-
         display: block;
         margin: auto;
         width: auto;
         padding-left: 2rem;
         align-content: center;
         justify-content: center;
-    
     }
     
     header div > h1{
@@ -480,7 +456,9 @@ footer > ul > li {
         margin-bottom: 1.5rem;
     }
 
-    .learning-project{
+    /* Mobile version for the learning project events */
+   
+    .learning-project-mobile{
         display: flex;
         flex-direction: column;
     }
@@ -494,13 +472,11 @@ footer > ul > li {
       .events-img-mobile {
         display:block;
         width: 100%;
-        
       }
 
     .events{
     display:grid;
     grid-column: full-start/full-end;
-    
     }
 
     .events > div{
@@ -509,7 +485,6 @@ footer > ul > li {
         padding: 0;
         padding: 4rem 1rem 2rem 1rem;
         border: none; /* Remove border from desktop-mpde */
-
     }
 
     .events > div:first-child{
@@ -527,7 +502,7 @@ footer > ul > li {
     font-size: x-large;
     }
 
-    /* Removing easter egg from the mobile version */
+    /* Removing easter egg grey div from the mobile version */
     .events div:hover{
         background-color: #f3f5f5;;
     }
@@ -538,9 +513,7 @@ footer > ul > li {
     background-color: #f3f5f5;
     }
 
-
     /* Mobile Start Learning Project Cards*/
-   
     .accordion img{
         max-width: 100%;
         height: auto;
@@ -551,8 +524,7 @@ footer > ul > li {
         grid-column: full-start/full-end;
         width:100%;
         text-decoration: none;
-        transition: 0.4s;   
-        
+        transition: 0.4s; 
     }
 
     .accordion > a{
@@ -560,8 +532,11 @@ footer > ul > li {
         background-color: #f3f5f5;
     }
 
+    /* For the opened up accordion to be white in color. */
+    .card-content{
+        background-color: #f3f5f5;
+    }
 
-   
     details {
         font-family: sans-serif;
         width: 100%;
@@ -572,7 +547,6 @@ footer > ul > li {
       }
     
       /* Adjust Start Learning Padding for mobile */
-
     .start-learning{
         display: grid;
         padding:0;
@@ -591,21 +565,20 @@ footer > ul > li {
     .learning-project-mobile span{
         font-size: medium;
     }
-      /*Remove hover for mobile  */
-      details:hover {
-       box-shadow: 0;
-      }
-      details > summary {
+    /*Remove hover effect for mobile */
+    details:hover {
+        box-shadow: 0;
+    }
+    details > summary {
         list-style: none;
-      }
-      /* Remove Arrow */
-      details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
-      details > summary::-webkit-details-marker /* Safari */ {
+    }
+        /* Remove Arrow from accordian*/
+    details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+    details > summary::-webkit-details-marker /* Safari */ {
         display: none;
+    }
         
-      }
-      
-      summary {
+    summary {
         margin: 0.5rem;
         padding-top: 1rem;
         padding-bottom:1.5rem;
@@ -613,7 +586,7 @@ footer > ul > li {
         cursor: pointer;
         font-size: x-large;
         font-weight: bold;
-      }
+    }
 
 
 }
