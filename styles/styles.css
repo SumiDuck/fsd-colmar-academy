@@ -130,7 +130,7 @@ header div > h2{
 
 /* To add padding to the Learn something new div so the button is center, */
 .learn-start{
-    padding-right: 1.5rem;
+    padding-right: 2rem;
 }
 
 /* Add Styling to the Start Here button */
@@ -204,7 +204,7 @@ header button:hover{
     display: grid;
     grid-template-columns: 0.35fr 0.65fr;
     border: 1px solid lightgray;
-    padding-top: 2.0625rem;
+    padding-top: 2rem;
     padding-left: 1rem;
     padding-bottom: 1rem;
     border-top-style: none;
@@ -482,10 +482,10 @@ footer > ul > li {
         height: 100%;
       }
 
-      .events-img-mobile {
+    .events-img-mobile {
         display:block;
         width: 100%;
-      }
+    }
 
     .events{
     display:grid;
@@ -496,7 +496,7 @@ footer > ul > li {
         display: flex;
         flex-direction: column;
         padding: 0;
-        padding: 4rem 1rem 2rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
         border: none; /* Remove border from desktop-mpde */
     }
 
